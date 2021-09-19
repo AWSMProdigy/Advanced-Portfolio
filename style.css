@@ -1,0 +1,127 @@
+:root{
+    --darkGrey: #33393f;
+    --myCo: rgb(2, 243, 243);
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darkGrey);
+    height: 100px;
+    align-items: center;
+}
+
+header h1{
+    background-color: var(--myCo);
+    color: var(--darkGrey);
+    padding-left: 50px;
+    font-size: 5em;
+}
+
+nav{
+    margin-right: 50px;
+}
+
+a{
+    font-size: 1.5em;
+    margin: 0 5px 0 5px;
+    text-decoration: none;
+    padding: 0 5px 3px 5px;
+    border-bottom: 2px solid var(--myCo);
+    color: var(--myCo);
+    
+    color: var(--myCo);
+
+    background-image: linear-gradient(180deg,
+        var(--darkGrey) 0%,
+        var(--darkGrey) 50%,
+        var(--myCo) 50%,
+        var(--myCo) 100%);
+    background-size: 100% 200%;
+    transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+    color .2s linear;
+    transition-delay: 0.0s, 0.15s;
+}
+
+a:hover{
+    color: var(--darkGrey);
+    cursor: pointer;
+    background-position: -100% 100%;
+}
+
+.hero {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("./images/millia-rage-guiltygear-strive.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1{
+    position: absolute;
+    bottom: 5%;
+    right: 5%; 
+    background-color: var(--myCo);
+    color: var(--darkGrey);
+    font-size: 3em;  
+}
+
+.fBox{
+    display: flex;
+    margin: 25px 5%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fBox h1{
+    color:navy;
+    border-bottom: 3px solid navy;
+    text-align: left;
+    font-size: 2em;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+
+.fImgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    flex: 1 1 50%;
+}
+
+.fImgBox img{
+    margin: 5px 5px;
+    width: 45%;
+}
+
+
+
+.fBox p{
+}
+
+@media screen and (min-width: 975px) {
+    .fBox{
+        flex-direction: row;
+        justify-content: left;
+    }
+    .fBox h1{
+        border-right: 3px solid navy;
+        border-bottom: none;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .fImgBox{
+        flex-direction: row;
+
+    }
+}
