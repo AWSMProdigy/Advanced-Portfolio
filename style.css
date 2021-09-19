@@ -6,22 +6,29 @@
 header{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background-color: var(--darkGrey);
-    height: 100px;
+    height: fit-content;
     align-items: center;
 }
 
 header h1{
     background-color: var(--myCo);
     color: var(--darkGrey);
-    padding-left: 50px;
     font-size: 5em;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 0;
 }
 
 nav{
-    margin-right: 50px;
+    margin: 10px auto;
+    
+}
+
+ul{
 }
 
 a{
@@ -73,7 +80,6 @@ a:hover{
 .fBox{
     display: flex;
     margin: 25px 5%;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -82,8 +88,8 @@ a:hover{
     border-bottom: 3px solid navy;
     text-align: left;
     font-size: 2em;
-    margin-right: 20px;
-    padding-right: 20px;
+    margin-right: 0;
+    padding-right: 0;
 }
 
 
@@ -94,17 +100,22 @@ a:hover{
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    flex: 1 1 50%;
 }
 
 .fImgBox img{
-    margin: 5px 5px;
-    width: 45%;
+    margin: 5px auto;
+    width: calc(90% + 10px);
+}
+
+.fImgBox .dub{
+    width: calc(90% + 10px);
 }
 
 
 
 .fBox p{
+    flex: 1 1 90%;
+    text-align: center;
 }
 
 @media screen and (min-width: 975px) {
@@ -117,11 +128,37 @@ a:hover{
         border-bottom: none;
         text-align: right;
     }
+    header{
+        flex-direction: row;
+        height: 100px;
+        justify-content: space-between;
+        width: auto;
+    }
+    header h1{
+        padding-left: 50px;
+        width: auto;
+    }
+    nav{
+        margin-right: 50px;
+    }
+    .fBox h1{
+        margin-right: 20px;
+        padding-right: 20px;
+        flex: 1 1 10%;
+    }
+
+    .fImgBox{
+        flex: 1 1 90%;
+    }
 }
 
 @media screen and (min-width: 500px) {
     .fImgBox{
         flex-direction: row;
-
     }
+    .fImgBox img{
+        width: 45%;
+        margin: 5px 5px;
+    }
+    
 }
