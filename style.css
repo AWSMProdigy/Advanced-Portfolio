@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 :root{
     --darkGrey: #33393f;
     --myCo: rgb(2, 243, 243);
@@ -25,7 +29,6 @@ header h1{
 
 nav{
     margin: 10px auto;
-    
 }
 
 ul{
@@ -92,6 +95,10 @@ a:hover{
     padding-right: 0;
 }
 
+.fBox p{
+    flex: 1 1 90%;
+    text-align: center;
+}
 
 .fImgBox{
     display: flex;
@@ -102,20 +109,47 @@ a:hover{
     width: 100%;
 }
 
-.fImgBox img{
-    margin: 5px auto;
-    width: calc(90% + 10px);
+.fImgBox div{
+    position: relative;
+    margin: 5px 5px;
+    width: 90%;
+    transition: .5s;
+    border: 5px solid var(--myCo);
 }
 
-.fImgBox .dub{
-    width: calc(90% + 10px);
+.sub{
+    height: fit-content;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    font-weight: bolder;
+    background-color: var(--myCo);
+    padding: 10px 5px 10px 5px;
 }
 
+.sub span{
+    display: block;
+    color: var(--darkGrey);
+}
 
+.big{
+    font-size: x-large;
+    margin-bottom: 5px;
+}
 
-.fBox p{
-    flex: 1 1 90%;
-    text-align: center;
+.small{
+    font-size:smaller;
+}
+
+.fImgBox div:hover{
+    filter: sepia(50%);
+    cursor: pointer;
+}
+
+.fImgBox div img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 975px) {
@@ -156,9 +190,18 @@ a:hover{
     .fImgBox{
         flex-direction: row;
     }
-    .fImgBox img{
+
+    .fImgBox div{
         width: 45%;
-        margin: 5px 5px;
+    }
+
+    .fImgBox .dub{
+        width: calc(90% + 20px);
+        margin-bottom: 5px;
+    }
+
+    .dub .sub{
+        bottom: 10%;
     }
     
 }
