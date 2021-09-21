@@ -83,6 +83,7 @@ a:hover{
 }
 
 .hero {
+    display: flex;
     position: relative;
     height: 800px;
     width: 100%;
@@ -90,12 +91,14 @@ a:hover{
     background-image: url("./images/millia-rage-guiltygear-strive.png");
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .hero h1{
-    position: absolute;
-    bottom: 5%;
-    right: 5%; 
+    margin-bottom: 10px;
+    width: fit-content;
+    height: fit-content;
     background-color: var(--myCo);
     color: var(--darkGrey);
     font-size: 3em;  
@@ -176,6 +179,7 @@ a:hover{
 
 .fImgBox img{
     width: 100%;
+    height: 300px; 
     display: block;
     margin: 0 auto;
 }
@@ -190,6 +194,11 @@ a:hover{
 }
 
 @media screen and (min-width: 975px) {
+    .hero h1{
+        position: absolute;
+        bottom: 5%;
+        right: 5%; 
+    }
     .fBox{
         flex-direction: row;
         justify-content: left;
@@ -236,11 +245,17 @@ a:hover{
 
     .fImgBox div{
         width: 45%;
+        height: 300px;
     }
 
     .fImgBox .dub{
         width: calc(90% + 20px);
+        height: 600px;
         margin-bottom: 5px;
+    }
+
+    .fImgBox .dub img{
+        height: 600px;
     }
 
     .dub .sub{
