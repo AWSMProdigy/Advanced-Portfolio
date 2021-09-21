@@ -32,9 +32,11 @@ nav{
 }
 
 ul{
+    text-align: center;
+    height: fit-content;
 }
 
-a{
+.topLinks a{
     font-size: 1.5em;
     margin: 0 5px 0 5px;
     text-decoration: none;
@@ -54,6 +56,25 @@ a{
     color .2s linear;
     transition-delay: 0.0s, 0.15s;
 }
+
+.botLinks{
+    display: flex;
+    flex: 1 1 90%;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.botLinks a{
+    width: fit-content;
+    color: var(--darkGrey);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--darkGrey);
+    margin: 20px auto;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
 
 a:hover{
     color: var(--darkGrey);
@@ -86,7 +107,13 @@ a:hover{
     flex-direction: column;
 }
 
-.fBox h1{
+.fBoxContact{
+    display: flex;
+    margin: 25px 5%;
+    flex-direction: column;
+}
+
+.fBox h1, .fBoxContact h1{
     color:navy;
     border-bottom: 3px solid navy;
     text-align: left;
@@ -98,6 +125,7 @@ a:hover{
 .fBox p{
     flex: 1 1 90%;
     text-align: center;
+    margin-top: 10px;
 }
 
 .fImgBox{
@@ -146,7 +174,7 @@ a:hover{
     cursor: pointer;
 }
 
-.fImgBox div img{
+.fImgBox img{
     width: 100%;
     display: block;
     margin: 0 auto;
@@ -157,10 +185,18 @@ a:hover{
         flex-direction: row;
         justify-content: left;
     }
-    .fBox h1{
+    .fBoxContact{
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+    }
+    .fBox h1, .fBoxContact h1{
         border-right: 3px solid navy;
         border-bottom: none;
         text-align: right;
+        margin-right: 20px;
+        padding-right: 20px;
+        flex: 1 1 10%;
     }
     header{
         flex-direction: row;
@@ -175,14 +211,12 @@ a:hover{
     nav{
         margin-right: 50px;
     }
-    .fBox h1{
-        margin-right: 20px;
-        padding-right: 20px;
-        flex: 1 1 10%;
-    }
 
     .fImgBox{
         flex: 1 1 90%;
+    }
+    .botLinks a{
+        margin: 0 auto;
     }
 }
 
