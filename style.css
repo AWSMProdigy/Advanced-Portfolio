@@ -7,6 +7,7 @@ body {
     --myCo: rgb(2, 243, 243);
 }
 
+/* Header has different color and displays my name responsively */
 header{
     width: 100%;
     display: flex;
@@ -27,6 +28,7 @@ header h1{
     margin-bottom: 0;
 }
 
+/* Nav is responsive */
 nav{
     margin: 10px auto;
 }
@@ -36,6 +38,7 @@ ul{
     height: fit-content;
 }
 
+/* a tags in nav have requested animation */
 .topLinks a{
     font-size: 1.5em;
     margin: 0 5px 0 5px;
@@ -57,6 +60,7 @@ ul{
     transition-delay: 0.0s, 0.15s;
 }
 
+/* Links at the bottom have proper spacing and are responsive */
 .botLinks{
     display: flex;
     flex: 1 1 90%;
@@ -82,6 +86,7 @@ a:hover{
     background-position: -100% 100%;
 }
 
+/* Picture of me fits and is responsive */
 .hero {
     display: flex;
     position: relative;
@@ -105,6 +110,7 @@ a:hover{
     text-align: center;
 }
 
+/* An fBox holds each section and moves with the screen size */
 .fBox{
     display: flex;
     margin: 25px 5%;
@@ -132,6 +138,7 @@ a:hover{
     margin-top: 10px;
 }
 
+/* fImgBox is another flexbox that houses images of work section, and has support for the larger image */
 .fImgBox{
     display: flex;
     justify-content: center;
@@ -185,6 +192,7 @@ a:hover{
     margin: 0 auto;
 }
 
+/* link is sized and positioned to cover the whole picture to make it interactive */
 .picLink{   
     position:absolute; 
     width:100%;
@@ -194,6 +202,8 @@ a:hover{
     z-index: 1;
 }
 
+/* Change screen when above 975px width */
+/* Change a lot of flex directions to column */
 @media screen and (min-width: 975px) {
     .hero h1{
         position: absolute;
@@ -239,6 +249,7 @@ a:hover{
     }
 }
 
+/* Change screen when above 500px width */
 @media screen and (min-width: 500px) {
     .fImgBox{
         flex-direction: row;
